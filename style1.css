@@ -1,0 +1,78 @@
+
+.panel{
+    width: 50%;
+    height: 77%;
+    background:black;
+    position: absolute;
+    top: 400%;
+    bottom: 0;
+    right: 0;
+    left: 0; 
+    margin: auto;
+    border-radius: 20px;
+    float: center;
+}
+.leftPanel{
+    width: 50%;
+    height: 100%; 
+    float: left;
+    text-align: center;
+    padding: 150px 0 0 0;
+
+}
+.rightPanel{
+     width: 50%;
+    height: 100%; 
+    float: right;
+    text-align: center;
+    padding-top: 10px ;
+}
+input{
+    margin-top:25px;
+    border-radius: 5px;
+    padding: 8px;
+    width: 80%;
+    border: 1px solid rgb(198, 231, 11);
+    box-shadow: 2px 2px rgb(19, 18, 18);
+}
+button{
+    margin-top: 25px;
+    border-radius: 5px;
+    padding: 8px 50px;
+    background: white;
+    color: black;
+    border: 1px dotted white;
+}
+.heading{
+    color: black;
+}
+.logoImage{
+    width: 80%;
+}
+@media only screen and (max-width: 600px){
+    body
+    {
+        background: rgb(111, 68, 180);
+
+    }
+
+    .panel{
+        width : 100%;
+        height: 60%;
+    }
+    .leftPanel{
+        float: none;
+        width: 100%;
+        height: auto;
+        padding: 20px 0 0 0;
+    }
+    .rightPanel{
+        float: none;
+        width: 100%;
+        height: auto;
+        padding: 40px 0 0 0;
+    }
+    .logoImage{
+        width: 40%;
+    }
+}
