@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Main Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../include/materialize.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Permanent+Marker|Kaushan+Script" rel="stylesheet">
+    <link rel="stylesheet" href="adminStyle.css">
+    <link rel="stylesheet" href="../include/animate.css">
+    <link rel="stylesheet" href="../include/googlepis.css">
+    <script src="../include/jquery.min.js"></script>
+    <script src="../include/materialize.js"></script>
+    <script>
+        $(function () {
+            $('select').material_select();
+        })
+        function preview(event) {
+            var pic=document.getElementById('pic');
+            pic.src=URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
+</head>
+<body>
+    <div class="animated bounceInLeft" id="heading">
+        <h2 onclick="window.location.href='../index.html'" >Shree Devi Institute of Technology</h2>
+    </div>
+    <div id="sidebar">
+        <h4 id="sidebarHeading">Role : Admin</h4>
+        <hr style="border-color: white;" width="80%" align="center"/>
+        <ol>
+            <li><a>Register <i class="fa fa-angle-down"></i></a>
+                <ol>
+                    <li><a href="">Register a Student</a></li>
+                    <li><a href="">Register\View a Faculty</a></li>
+                    <li><a href="">Register\View a Department</a></li>
+                    <li><a href="">Register\View a Section</a></li>
+                    <li><a href="">Register\View a Subject</a></li>
+                </ol>
+            </li>
+        </ol>
+        <ol>
+            <li><a href="">View</a>
+                <ol>
+                    <li><a href="">View Student Deatils</a></li>
+                    <li><a href="">View Attendance</a></li>
+                    <li><a href="">View Remards</a></li>
+                    <li><a href="">Register a Section</a></li>
+                    <li><a href="">Register a Subject</a></li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+    <div class="maincontent" id="regStudent">
+        <h1>Register a Student</h1>
+        <hr/>
+        <form enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class=" col-sm-6">
+                            <div class="input-field">
+                                <input type="text" id="sname" style="text-transform: capitalize" required="required" >
+                                <label for="sname">Student Name :</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-field">
+                                <input type="text" id="spname" required="required">
+                                <label for="spname">Parents Name :</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class=" col-sm-6">
+                            <div class="input-field">
+                                <input type="text" id="smobile" style="text-transform: capitalize">
+                                <label for="smobile">Student Mobile No :</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-field">
+                                <input type="text" id="spmobile">
+                                <label for="spmobile">Parents Mobile :</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class=" col-sm-6">
+                            <div class="input-field">
+                                <select name="sdept" required="required">
+                                    <option value="" style="display: none" disabled >Choose a Dept</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-field">
+                                <input type="text" id="ssem" required="required">
+                                <label for="ssem">Current SEM :</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class=" col-sm-6">
+                            <div class="input-field">
+                              <textarea cols="5" id="saddr" class="materialize-textarea"></textarea>
+                                <label>Address :</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <img id="pic" height="200" width="200" style="border-radius: 10px;border:solid thin red;" />
+                    <div class="input-field">
+                        <input type="file" accept="image/*" onchange="preview(event)">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
