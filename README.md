@@ -7,4 +7,4 @@ Then on the top (tab on navbar), click on import option.
 
 click on choose file option and choose collegeDB.sql file which is located inside this project. Then click on go button.
 
-Then come back your project and click on admin login. Give username as admin and password as sdit and lick on submit
+Then come back your project and click on admin login. Give username as admin and password as sdit and click on submit
